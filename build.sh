@@ -10,6 +10,5 @@ cd ../../
 
 gcc main.c \
     ./raylib/src/libraylib.a \
-    -lm -lpthread -ldl -lrt -lX11 \
-    -lwayland-client -lwayland-cursor -lwayland-egl -lxkbcommon \
+    -lm -lX11 \
     -o bin/screen-freeze 
