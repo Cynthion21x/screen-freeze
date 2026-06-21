@@ -24,14 +24,11 @@ int main(int argsc, char* argsv[]) {
     }
 
     // init
-    int screenW = GetScreenWidth();
-    int screenH = GetScreenHeight();
-
-    InitWindow(screenW, screenH, "freeze");
+    InitWindow(0, 0, "freeze");
     SetTargetFPS(60);
 
     // read image from stdin
-    unsigned char buffer[1];
+    unsigned char buffer[8192];
 
     size_t capacity = 8192;
     size_t total = 0;

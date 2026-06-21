@@ -1,14 +1,14 @@
 #!/bin/bash
 
-mkdir bin
+mkdir -p bin
 
 cd ./raylib/src/
 
-make PLATFORM=PLATFORM_DESKTOP USE_WAYLAND=TRUE
+make PLATFORM=PLATFORM_DESKTOP
 
 cd ../../
 
 gcc main.c \
     ./raylib/src/libraylib.a \
-    -lm -lX11 \
+    -lm -lwayland-client \
     -o bin/screen-freeze 
